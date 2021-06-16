@@ -1,0 +1,18 @@
+name: build
+on: [push, pull_request]
+
+jobs:
+  build_latex_pdf:
+    runs-on: texlive/texlive:latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: build
+        run: make && make clean
+
+      - name: create pdf artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: pdf
+          path: main.pdf
