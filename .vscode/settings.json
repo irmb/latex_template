@@ -1,0 +1,13 @@
+{
+    "latex-workshop.latex.outDir": "%DIR%/build",
+    "latex-workshop.synctex.afterBuild.enabled": false,
+    "spellright.language": [
+        "en",
+        "de"
+    ],
+    "spellright.documentTypes": [
+        "markdown",
+        "latex",
+        "plaintext"
+    ]
+}

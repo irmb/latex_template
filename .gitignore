@@ -12,3 +12,5 @@ main-blx.bib
 main.run.xml
 main.for
 main.pdf
+
+build/
