@@ -3,13 +3,16 @@ on: [push, pull_request]
 
 jobs:
   build_latex_pdf:
-    runs-on: texlive/texlive:latest
+    runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v2
 
-      - name: build
-        run: make && make clean
+      - uses: xu-cheng/texlive-action/full@v1
+        with:
+          run: |
+            apk add make
+            make
 
       - name: create pdf artifact
         uses: actions/upload-artifact@v2
